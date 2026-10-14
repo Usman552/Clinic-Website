@@ -1,0 +1,40 @@
+{
+  "name": "aurelle-clinic",
+  "version": "1.0.0",
+  "description": "Aurelle Clinic: a bilingual (English/Arabic, RTL) premium private clinic website built with Next.js, TypeScript and Tailwind CSS.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^16.4.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "postcss": "^8.5.30",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2"
+  },
+  "private": true,
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "clinic",
+    "healthcare",
+    "rtl",
+    "arabic",
+    "i18n"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Usman552/Clinic-Website.git"
+  }
+}
