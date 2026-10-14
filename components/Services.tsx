@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import Link from "next/link";
 import type { Dict } from "@/lib/dictionaries";
 import { href, type Locale } from "@/lib/i18n";
@@ -28,7 +29,7 @@ export function Services({ lang, dict }: { lang: Locale; dict: Dict }) {
                 >
                   <div className="img-zoom relative aspect-[16/10] overflow-hidden bg-line">
                     <Image
-                      src={svc.image}
+                      src={asset(svc.image)}
                       alt={svc.alt}
                       fill
                       sizes={i < 3 ? "(min-width: 1024px) 400px, 50vw" : "(min-width: 1024px) 600px, 50vw"}

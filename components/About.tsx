@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import type { Dict } from "@/lib/dictionaries";
 import { href, type Locale } from "@/lib/i18n";
 import { TextLink } from "./Button";
@@ -14,7 +15,7 @@ export function About({ lang, dict }: { lang: Locale; dict: Dict }) {
           <div className="relative">
             <div className="img-zoom relative aspect-[4/3] overflow-hidden rounded-[4px] bg-line lg:aspect-[5/4]">
               <Image
-                src="/images/about-consult.jpg"
+                src={asset("/images/about-consult.jpg")}
                 alt={about.imgAlt}
                 fill
                 sizes="(min-width: 1024px) 560px, 100vw"

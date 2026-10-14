@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import Link from "next/link";
 import type { Dict } from "@/lib/dictionaries";
 import { href, type Locale } from "@/lib/i18n";
@@ -24,7 +25,7 @@ export function Doctors({ lang, dict }: { lang: Locale; dict: Dict }) {
                 <article className="group flex h-full flex-col overflow-hidden rounded-[4px] border border-line bg-white">
                   <Link href={href(lang, `/doctors/${d.slug}`)} tabIndex={-1} aria-hidden className="img-zoom relative block aspect-[4/5] overflow-hidden bg-line">
                     <Image
-                      src={d.image}
+                      src={asset(d.image)}
                       alt=""
                       fill
                       sizes="(min-width: 1024px) 400px, (min-width: 640px) 45vw, 100vw"

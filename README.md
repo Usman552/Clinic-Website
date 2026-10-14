@@ -4,6 +4,8 @@ A premium, bilingual (**English / Arabic with full RTL**) website for a private 
 
 > **Demonstration project.** All clinic details (address, phone, email, hours), doctor profiles and testimonials are clearly marked **sample content**. The appointment form has **no backend**: it validates input, then states plainly that nothing was sent, stored or confirmed.
 
+**Live demo: <https://usman552.github.io/Clinic-Website/>**
+
 ![Aurelle Clinic home page](docs/screenshots/home-desktop-en.jpg)
 
 ## Features
@@ -69,6 +71,14 @@ npm run build   # production build
 npm start       # serve the production build
 ```
 
+## Deploying to GitHub Pages
+
+The repo deploys automatically on every push to `main` via `.github/workflows/deploy.yml`.
+The Pages build sets `GITHUB_PAGES=true`, which makes `next.config.ts` produce a static export (`out/`) under the `/Clinic-Website` base path with unoptimised images. Normal `npm run build` is unaffected.
+
+To build the Pages version locally: `GITHUB_PAGES=true npm run build` (PowerShell: `$env:GITHUB_PAGES="true"; npm run build`).
+Static export has no server, so the root redirect is a small `public/index.html` that forwards to `en/`.
+
 ## Project structure
 
 ```
@@ -84,6 +94,7 @@ lib/
   i18n.ts                 # locales, direction, link helper
   dictionaries/en.ts      # all English content and UI strings (source of truth for types)
   dictionaries/ar.ts      # Arabic translation (must match en.ts shape)
+  asset.ts                # prefixes image paths with the deploy base path
 public/images/            # photography
 docs/screenshots/         # README images
 ```

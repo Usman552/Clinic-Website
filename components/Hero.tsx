@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import type { Dict } from "@/lib/dictionaries";
 import { href, type Locale } from "@/lib/i18n";
 import { Button } from "./Button";
@@ -39,7 +40,7 @@ export function Hero({ lang, dict }: { lang: Locale; dict: Dict }) {
         <div className="rise relative lg:col-span-6" style={{ "--d": "250ms" } as React.CSSProperties}>
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[4px] bg-line lg:aspect-[5/4]">
             <Image
-              src="/images/hero-consult.jpg"
+              src={asset("/images/hero-consult.jpg")}
               alt={hero.imgAlt}
               fill
               priority

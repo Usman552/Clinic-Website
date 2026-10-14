@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/Button";
@@ -36,7 +37,7 @@ export default async function DoctorPage({ params }: { params: Promise<{ lang: s
         <div className="mt-8 grid items-start gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[4px] bg-line lg:col-span-5">
             <Image
-              src={d.image}
+              src={asset(d.image)}
               alt={d.alt}
               fill
               priority
